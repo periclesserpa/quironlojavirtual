@@ -21,7 +21,7 @@ namespace Quiron.LojaVirtual.Web.Controllers
             .Skip((pagina - 1) * ProdutosPorPagina)
             .Take(ProdutosPorPagina);
 
-            return View(produtos);
+            return View(produtos) ;
             
         }
     }
