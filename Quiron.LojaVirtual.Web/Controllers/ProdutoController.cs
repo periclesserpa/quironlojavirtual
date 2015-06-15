@@ -1,4 +1,5 @@
-﻿using Quiron.LojaVirtual.Dominio.Repositorio;
+﻿using Quiron.LojaVirtual.Dominio.Entidades;
+using Quiron.LojaVirtual.Dominio.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,8 @@ namespace Quiron.LojaVirtual.Web.Controllers
             var produtos = _repositorio.Produtos.Take(10);
             return View(produtos);
         }
+
+
+        
     }
 }
