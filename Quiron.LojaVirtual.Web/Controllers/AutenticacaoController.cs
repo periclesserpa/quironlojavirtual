@@ -41,12 +41,16 @@ namespace Quiron.LojaVirtual.Web.Controllers
                     else
                     {
                         FormsAuthentication.SetAuthCookie(admin.Login, false);
-                        if (Url.IsLocalUrl(returnUrl) 
+                        if (Url.IsLocalUrl(returnUrl)
                             && returnUrl.Length > 1
                             && returnUrl.StartsWith("/")
                             && !returnUrl.StartsWith("//")
                             && !returnUrl.StartsWith("/\\"))
+                        {
                             return Redirect(returnUrl);
+                        }
+
+                        return RedirectToAction("Index", "Produto", new { area = "Administrativo" });
                     }
                 }
                 else
