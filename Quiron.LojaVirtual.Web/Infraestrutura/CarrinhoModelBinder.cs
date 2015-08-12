@@ -18,8 +18,7 @@ namespace Quiron.LojaVirtual.Web.Infraestrutura
 
             if (controllerContext.HttpContext.Session != null)
             {
-                carrinho = (Carrinho) controllerContext.HttpContext.Session["SessionKey"]
-
+                carrinho = (Carrinho)controllerContext.HttpContext.Session[SessionKey];
             }
 
             // Crio o carrinho se não tenho a sessão

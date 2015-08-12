@@ -9,12 +9,12 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
     public class Carrinho
     {
         private readonly List<ItemCarrinho> _itemCarrinho = new List<ItemCarrinho>();
-
+        
         // Adicionar
         public void AdicionarItem(Produto produto, int quantidade)
         {
             ItemCarrinho item = _itemCarrinho.FirstOrDefault(p => p.Produto.ProdutoId == produto.ProdutoId);
-
+            
             if (item == null)
             {
                 _itemCarrinho.Add(new ItemCarrinho
